@@ -11,16 +11,37 @@ const soma = function(a,b) {
     return a + b;
 }
 
-function simples(){
-let a = 5
-let b = 12
-let c = a + b
+console.log(soma(5,10))
+
+//arrow function
+const multiplicar = (a,b) => { a * b
+    console.log(multiplicar(5,3))
+    console.log(multiplicar(2,8))
+    console.log(multiplicar(4,7))
 }
 
-console.log("o valor de c é: " + c)
 
-function somar (a,b){
-    return a + b;
+//
+function cumprimentar(nome = "kari") {
+    return console.log(`olá, ${nome}`)
 }
 
-console.log( somar(5,10))
+
+//função auto-invocada
+(function() {
+    console.log("função auto-invocada")
+})()
+
+
+//função callback
+function processar(valor, callback) {
+    const resultado = callback(valor)
+    console.log(`resultado: ${resultado}`)
+}
+
+
+//função assíncrona
+async function processarAssync(valor, callback) {
+    const resultado = await callback(valor)
+    console.log(`resultado: ${resultado}`)
+}
